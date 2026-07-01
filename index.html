@@ -12,6 +12,15 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="Canada PR" name="apple-mobile-web-app-title"/>
 <link href="manifest.webmanifest" rel="manifest"/>
+<script>
+window.__pwaInstallPrompt = null;
+window.addEventListener("beforeinstallprompt", function (event) {
+  event.preventDefault();
+  window.__pwaInstallPrompt = event;
+  window.dispatchEvent(new Event("pwa-install-ready"));
+});
+</script>
+
 <link href="./icon-32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="./icon-16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="./icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
@@ -1069,119 +1078,148 @@ if(document.querySelector(`.page[data-page="${initial}"]`))showPage(initial,fals
 </div>
 
 
+
+
+
 <script>
 (() => {
-  const installBtn = document.getElementById('installAppBtn');
-  const help = document.getElementById('pwaHelp');
-  const helpClose = document.getElementById('pwaHelpClose');
-  const steps = document.getElementById('pwaSteps');
-  const updateToast = document.getElementById('pwaUpdateToast');
-  const updateBtn = document.getElementById('pwaUpdateBtn');
-  let deferredPrompt = null;
+  const installBtn = document.getElementById("installAppBtn");
+  const help = document.getElementById("pwaHelp");
+  const helpClose = document.getElementById("pwaHelpClose");
+  const steps = document.getElementById("pwaSteps");
+  const updateToast = document.getElementById("pwaUpdateToast");
+  const updateBtn = document.getElementById("pwaUpdateBtn");
+
   let waitingWorker = null;
   let refreshing = false;
 
   const isStandalone = () =>
-    window.matchMedia('(display-mode: standalone)').matches ||
+    window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
 
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  const isAndroid = /android/i.test(navigator.userAgent);
 
   function hideInstall() {
-    installBtn?.classList.remove('show');
+    installBtn?.classList.remove("show");
   }
 
-  function showInstall() {
-    if (!isStandalone()) installBtn?.classList.add('show');
-  }
-
-  function openHelp(kind) {
-    if (!help || !steps) return;
-    if (kind === 'ios') {
-      steps.innerHTML =
-        '<li>Mở trang bằng <b>Safari</b>.</li>' +
-        '<li>Nhấn nút <b>Chia sẻ</b> ở thanh công cụ.</li>' +
-        '<li>Chọn <b>Thêm vào Màn hình chính</b>.</li>' +
-        '<li>Nhấn <b>Thêm</b> để hoàn tất.</li>';
-    } else {
-      steps.innerHTML =
-        '<li>Mở menu trình duyệt.</li>' +
-        '<li>Chọn <b>Cài đặt ứng dụng</b> hoặc <b>Thêm vào màn hình chính</b>.</li>' +
-        '<li>Xác nhận cài đặt.</li>';
+  function showNativeInstall() {
+    if (!isStandalone() && window.__pwaInstallPrompt) {
+      installBtn?.classList.add("show");
     }
-    help.classList.add('show');
-    help.setAttribute('aria-hidden', 'false');
   }
 
-  window.addEventListener('beforeinstallprompt', event => {
-    event.preventDefault();
-    deferredPrompt = event;
-    showInstall();
-  });
+  function showIOSInstructions() {
+    if (!help || !steps) return;
+    steps.innerHTML =
+      "<li>Mở trang bằng <b>Safari</b>.</li>" +
+      "<li>Nhấn nút <b>Chia sẻ</b>.</li>" +
+      "<li>Chọn <b>Thêm vào Màn hình chính</b>.</li>" +
+      "<li>Nhấn <b>Thêm</b> để hoàn tất.</li>";
+    help.classList.add("show");
+    help.setAttribute("aria-hidden", "false");
+  }
 
-  window.addEventListener('appinstalled', () => {
-    deferredPrompt = null;
+  window.addEventListener("pwa-install-ready", showNativeInstall);
+  showNativeInstall();
+
+  window.addEventListener("appinstalled", () => {
+    window.__pwaInstallPrompt = null;
     hideInstall();
   });
 
-  installBtn?.addEventListener('click', async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const result = await deferredPrompt.userChoice;
-      if (result.outcome === 'accepted') hideInstall();
-      deferredPrompt = null;
+  installBtn?.addEventListener("click", async () => {
+    if (isIOS) {
+      showIOSInstructions();
       return;
     }
-    openHelp(isIOS ? 'ios' : 'other');
+
+    const promptEvent = window.__pwaInstallPrompt;
+    if (!promptEvent) {
+      hideInstall();
+      return;
+    }
+
+    promptEvent.prompt();
+    const result = await promptEvent.userChoice;
+    window.__pwaInstallPrompt = null;
+
+    if (result.outcome === "accepted") {
+      hideInstall();
+    }
   });
 
-  helpClose?.addEventListener('click', () => {
-    help.classList.remove('show');
-    help.setAttribute('aria-hidden', 'true');
+  helpClose?.addEventListener("click", () => {
+    help?.classList.remove("show");
+    help?.setAttribute("aria-hidden", "true");
   });
-  help?.addEventListener('click', event => {
+
+  help?.addEventListener("click", event => {
     if (event.target === help) helpClose?.click();
   });
 
-  if (!isStandalone()) setTimeout(showInstall, 700);
+  // Safari iOS không hỗ trợ beforeinstallprompt, nên chỉ iOS mới hiện nút hướng dẫn.
+  if (!isStandalone() && isIOS) {
+    installBtn?.classList.add("show");
+  }
 
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', async () => {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", async () => {
       try {
-        const registration = await navigator.serviceWorker.register('./sw.js', { scope: './' });
+        const registration = await navigator.serviceWorker.register("./sw.js", {
+          scope: "./",
+          updateViaCache: "none"
+        });
+
+        await navigator.serviceWorker.ready;
+
+        // Lần đầu Service Worker vừa được cài nhưng chưa điều khiển trang.
+        // Tự tải lại đúng một lần để Chrome đánh giá app là installable.
+        if (
+          !navigator.serviceWorker.controller &&
+          !sessionStorage.getItem("canada-pr-pwa-controlled-v3")
+        ) {
+          sessionStorage.setItem("canada-pr-pwa-controlled-v3", "1");
+          location.reload();
+          return;
+        }
 
         function announceUpdate(worker) {
           waitingWorker = worker;
-          updateToast?.classList.add('show');
+          updateToast?.classList.add("show");
         }
 
-        if (registration.waiting) announceUpdate(registration.waiting);
+        if (registration.waiting) {
+          announceUpdate(registration.waiting);
+        }
 
-        registration.addEventListener('updatefound', () => {
+        registration.addEventListener("updatefound", () => {
           const worker = registration.installing;
           if (!worker) return;
-          worker.addEventListener('statechange', () => {
-            if (worker.state === 'installed' && navigator.serviceWorker.controller) {
+
+          worker.addEventListener("statechange", () => {
+            if (
+              worker.state === "installed" &&
+              navigator.serviceWorker.controller
+            ) {
               announceUpdate(worker);
             }
           });
         });
 
-        updateBtn?.addEventListener('click', () => {
-          waitingWorker?.postMessage('SKIP_WAITING');
+        updateBtn?.addEventListener("click", () => {
+          waitingWorker?.postMessage("SKIP_WAITING");
         });
 
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
           if (refreshing) return;
           refreshing = true;
-          window.location.reload();
+          location.reload();
         });
 
-        // Chủ động kiểm tra bản mới khi mở app.
         registration.update().catch(() => {});
       } catch (error) {
-        console.warn('Không thể đăng ký Service Worker:', error);
+        console.warn("Không thể đăng ký Service Worker:", error);
       }
     });
   }

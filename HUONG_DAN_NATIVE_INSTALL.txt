@@ -1,0 +1,42 @@
+CANADA PR MASTER — BẢN NATIVE INSTALL
+
+LỖI ĐÃ SỬA
+Service Worker cũ yêu cầu cache nhiều icon không tồn tại:
+icon-48, icon-72, icon-96, icon-128, icon-144, icon-152 và icon-384.
+Chỉ một file bị 404 cũng làm cache.addAll thất bại, khiến Service Worker không cài được.
+Khi đó Chrome không phát beforeinstallprompt, nên nút cũ chỉ mở hướng dẫn
+“Add to Home Screen” thay vì hộp thoại cài ứng dụng thật.
+
+BẢN NÀY ĐÃ:
+- Chỉ cache đúng các file thực sự tồn tại.
+- Tăng phiên bản Service Worker lên v3.
+- Chỉ hiện nút “Cài ứng dụng” trên Android/Chrome khi native install prompt đã sẵn sàng.
+- Click nút sẽ gọi trực tiếp hộp thoại cài PWA của trình duyệt.
+- Tự tải lại một lần sau khi Service Worker lần đầu kiểm soát trang.
+- Không còn fallback giả sang hướng dẫn Add to Home Screen trên Android.
+- iPhone/iPad vẫn dùng Add to Home Screen vì Safari không hỗ trợ native beforeinstallprompt.
+
+CÁCH CẬP NHẬT
+1. Giải nén ZIP.
+2. Upload toàn bộ file trong ZIP vào thư mục gốc repository.
+3. Cho phép ghi đè index.html, manifest.webmanifest và sw.js.
+4. Commit changes.
+5. Chờ Actions/Pages deploy xong.
+6. Mở web bằng Chrome thông thường, không dùng tab ẩn danh.
+7. Mở đường dẫn với ?v=3 trong lần đầu, ví dụ:
+   https://9852917330.github.io/95384687909852917330ca/?v=3
+8. Trang có thể tự tải lại một lần.
+9. Khi Chrome xác nhận app đủ điều kiện, nút “Cài ứng dụng” sẽ xuất hiện.
+10. Click nút sẽ mở hộp thoại cài ứng dụng thật.
+
+CẤU TRÚC FILE
+index.html
+manifest.webmanifest
+sw.js
+icon-16.png
+icon-32.png
+icon-180.png
+icon-192.png
+icon-512.png
+maskable-192.png
+maskable-512.png
