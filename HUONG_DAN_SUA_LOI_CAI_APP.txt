@@ -1,0 +1,32 @@
+CANADA PR MASTER — BỘ PWA DỄ UPLOAD BẰNG ĐIỆN THOẠI
+
+LỖI Ở BẢN TRƯỚC
+Repository chỉ có index.html, manifest.webmanifest và sw.js nhưng thiếu toàn bộ thư mục icons.
+Vì manifest không tải được icon 192x192 và 512x512, trình duyệt không xác nhận app đủ điều kiện cài.
+Service Worker cũng không cài thành công vì danh sách cache chứa các icon bị lỗi 404.
+
+CÁCH CẬP NHẬT
+1. Giải nén ZIP này.
+2. Trong repository GitHub, chọn Add file → Upload files.
+3. Chọn TOÀN BỘ file trong ZIP và upload vào thư mục gốc.
+4. Cho phép ghi đè index.html, manifest.webmanifest và sw.js.
+5. Commit changes.
+6. Chờ GitHub Pages deploy xong.
+7. Mở link bằng Chrome và thêm ?v=2 ở cuối trong lần mở đầu tiên.
+8. Tải lại trang một lần rồi nhấn nút Cài ứng dụng.
+
+CẤU TRÚC ĐÚNG Ở THƯ MỤC GỐC
+index.html
+manifest.webmanifest
+sw.js
+icon-16.png
+icon-32.png
+icon-180.png
+icon-192.png
+icon-512.png
+maskable-192.png
+maskable-512.png
+
+KHÔNG CẦN
+- Không cần thư mục icons.
+- Không cần file .nojekyll cho bộ này.

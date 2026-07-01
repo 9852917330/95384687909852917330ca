@@ -1,22 +1,22 @@
-const CACHE_NAME = "canada-pr-master-v1-20260701";
+const CACHE_NAME = "canada-pr-master-v2-20260701-flat";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
-  "./icons/icon-16.png",
-  "./icons/icon-32.png",
-  "./icons/icon-48.png",
-  "./icons/icon-72.png",
-  "./icons/icon-96.png",
-  "./icons/icon-128.png",
-  "./icons/icon-144.png",
-  "./icons/icon-152.png",
-  "./icons/icon-180.png",
-  "./icons/icon-192.png",
-  "./icons/icon-384.png",
-  "./icons/icon-512.png",
-  "./icons/maskable-192.png",
-  "./icons/maskable-512.png"
+  "./icon-16.png",
+  "./icon-32.png",
+  "./icon-48.png",
+  "./icon-72.png",
+  "./icon-96.png",
+  "./icon-128.png",
+  "./icon-144.png",
+  "./icon-152.png",
+  "./icon-180.png",
+  "./icon-192.png",
+  "./icon-384.png",
+  "./icon-512.png",
+  "./maskable-192.png",
+  "./maskable-512.png"
 ];
 
 self.addEventListener("install", event => {

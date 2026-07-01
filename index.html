@@ -12,9 +12,9 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="Canada PR" name="apple-mobile-web-app-title"/>
 <link href="manifest.webmanifest" rel="manifest"/>
-<link href="icons/icon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="icons/icon-16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="icons/icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="./icon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="./icon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="./icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
 
 <title>Canada PR Master File — Nguyễn Nhật Điền</title>
 <style>
@@ -1050,13 +1050,13 @@ if(document.querySelector(`.page[data-page="${initial}"]`))showPage(initial,fals
 </script>
 
 <button aria-label="Cài Canada PR Master thành ứng dụng" class="pwaInstallBtn" id="installAppBtn" type="button">
-  <img alt="" src="icons/icon-192.png"/>
+  <img alt="" src="./icon-192.png"/>
   <span>Cài ứng dụng<small>Canada PR Master</small></span>
 </button>
 <div aria-hidden="true" class="pwaHelp" id="pwaHelp">
   <div class="pwaHelpCard" role="dialog" aria-modal="true" aria-labelledby="pwaHelpTitle">
     <div class="pwaHelpHead">
-      <img alt="Logo lá phong Canada PR" src="icons/icon-192.png"/>
+      <img alt="Logo lá phong Canada PR" src="./icon-192.png"/>
       <div><h2 id="pwaHelpTitle">Cài Canada PR Master</h2><p>Ứng dụng chạy độc lập và có thể mở khi mất mạng sau lần tải đầu.</p></div>
     </div>
     <ol class="pwaSteps" id="pwaSteps"></ol>
@@ -1144,7 +1144,7 @@ if(document.querySelector(`.page[data-page="${initial}"]`))showPage(initial,fals
     if (event.target === help) helpClose?.click();
   });
 
-  if (!isStandalone() && isIOS) showInstall();
+  if (!isStandalone()) setTimeout(showInstall, 700);
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
