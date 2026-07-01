@@ -1,0 +1,31 @@
+CANADA PR MASTER — BỘ PWA CHO GITHUB PAGES
+
+THÀNH PHẦN
+- index.html: web chính
+- manifest.webmanifest: cấu hình ứng dụng
+- sw.js: Service Worker, cache offline và nhận bản cập nhật
+- icons/: logo lá phong và các icon PWA
+- .nojekyll: yêu cầu GitHub Pages phục vụ file tĩnh trực tiếp
+
+ĐĂNG LÊN GITHUB PAGES
+1. Giải nén file ZIP.
+2. Upload toàn bộ file và thư mục BÊN TRONG ZIP vào thư mục gốc của repository.
+3. Vào Settings → Pages.
+4. Source: Deploy from a branch.
+5. Chọn branch main và thư mục /(root), sau đó Save.
+6. Chờ GitHub Pages triển khai xong rồi mở đường dẫn HTTPS được cấp.
+
+CÀI ỨNG DỤNG
+- Android/Chrome/Edge: mở web, nhấn nút “Cài ứng dụng” hoặc chọn Install app trong menu trình duyệt.
+- iPhone/iPad: mở bằng Safari → Chia sẻ → Thêm vào Màn hình chính.
+- Máy tính Chrome/Edge: nhấn biểu tượng cài đặt trên thanh địa chỉ hoặc nút “Cài ứng dụng”.
+
+CẬP NHẬT SAU NÀY
+- Ghi đè index.html hoặc các file cần sửa.
+- Khi thay đổi nội dung lớn, đổi CACHE_NAME trong sw.js để thiết bị nhận bản mới ngay.
+- Bản hiện tại: canada-pr-master-v1-20260701
+
+LƯU Ý
+- GitHub Pages phải chạy bằng HTTPS thì PWA mới cài đặt được.
+- Không upload nguyên thư mục bao ngoài; hãy upload các file nằm bên trong.
+- Web vẫn giữ noindex, nofollow, noarchive, nosnippet.
