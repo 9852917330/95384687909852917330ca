@@ -1,4 +1,4 @@
-const CACHE_NAME = "canada-pr-master-v3-native-install-20260701";
+const CACHE_NAME = "canada-pr-v5-20260702";
 const APP_SHELL = [
   "./",
   "./index.html",

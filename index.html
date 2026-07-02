@@ -5,8 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="noindex,nofollow,noarchive,nosnippet" name="robots"/>
-<meta content="#050c17" name="theme-color"/>
-<meta content="Canada PR Master File" name="application-name"/>
+<meta content="#030711" name="theme-color"/>
+<meta content="Canada PR" name="application-name"/>
 <meta content="yes" name="mobile-web-app-capable"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
@@ -25,7 +25,7 @@ window.addEventListener("beforeinstallprompt", function (event) {
 <link href="./icon-16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="./icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
 
-<title>Canada PR Master File — Nguyễn Nhật Điền</title>
+<title>Canada PR</title>
 <style>
 :root{--bg:#050c17;--bg2:#091525;--panel:#0d1d31;--panel2:#10243b;--text:#edf7ff;--muted:#91a8bd;--line:#213b57;--cyan:#36d7ff;--blue:#5d88ff;--green:#49e5a4;--amber:#ffca66;--red:#ff7181;--purple:#b893ff;--navh:66px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 8% 0%,rgba(31,94,153,.44),transparent 28%),radial-gradient(circle at 95% 6%,rgba(28,104,93,.28),transparent 24%),var(--bg);min-height:100vh}button,input{font:inherit}a{color:inherit}
@@ -85,15 +85,146 @@ window.addEventListener("beforeinstallprompt", function (event) {
 }
 @media print{.pwaInstallBtn,.pwaHelp,.pwaUpdateToast{display:none!important}}
 
+
+/* Canada PR — giao diện gọn, không cuộn ngang */
+:root{--bg:#030711;--bg2:#07101e;--panel:#0a1424;--panel2:#0d1a2e;--text:#f3f8ff;--muted:#93a8be;--line:rgba(121,166,210,.20);--cyan:#26e8ff;--blue:#538bff;--green:#44f0a4;--amber:#ffcf5a;--red:#ff5e85;--purple:#b875ff;--pink:#ff55d5;--orange:#ff8a45;--navh:70px}
+html{background:var(--bg)}
+body{background:radial-gradient(circle at 8% -5%,rgba(38,232,255,.16),transparent 27%),radial-gradient(circle at 95% 2%,rgba(184,117,255,.14),transparent 24%),radial-gradient(circle at 52% 100%,rgba(68,240,164,.08),transparent 34%),var(--bg);overflow-x:hidden}
+body.menuOpen{overflow:hidden}
+.topbar{height:70px;min-height:70px;padding:9px 16px;gap:14px;background:rgba(3,8,18,.91);border-bottom:1px solid rgba(109,204,255,.18);box-shadow:0 10px 34px rgba(0,0,0,.38);z-index:1200}
+.brand{border:0;padding:0;margin:0;gap:10px;color:inherit;background:transparent;min-width:170px}
+.brandButton{cursor:pointer;text-align:left}
+.brandMark{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,rgba(38,232,255,.20),rgba(184,117,255,.15));border:1px solid rgba(38,232,255,.40);box-shadow:0 0 24px rgba(38,232,255,.16)}
+.brand b{font-size:15px;letter-spacing:.1px}.brand small{font-size:10px;color:#8ea7bf;margin-top:3px}
+.quickNav{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));align-items:stretch;gap:4px;min-width:0;flex:1;overflow:visible}
+.navWrap{overflow:visible;min-width:0}.nav{width:auto;padding:0}
+.navBtn{font-size:12px;font-weight:800;border:1px solid rgba(113,158,203,.22);background:rgba(9,23,41,.82);color:#c8d8e8;border-radius:12px;padding:9px 12px;box-shadow:none;transition:transform .16s,border-color .16s,background .16s,color .16s;white-space:normal;text-align:left}
+.quickBtn{--menu-rgb:38,232,255;display:flex;align-items:center;justify-content:center;min-width:0;min-height:42px;padding:6px 3px;border-radius:10px;border-color:rgba(var(--menu-rgb),.25);background:linear-gradient(145deg,rgba(var(--menu-rgb),.07),rgba(8,20,36,.90));font-size:clamp(8px,.58vw,10px);line-height:1.08;letter-spacing:-.1px;white-space:normal;text-align:center;overflow-wrap:anywhere}
+.quickBtn:nth-child(2),.quickBtn:nth-child(12){--menu-rgb:255,85,213}.quickBtn:nth-child(3),.quickBtn:nth-child(5){--menu-rgb:184,117,255}.quickBtn:nth-child(4),.quickBtn:nth-child(7){--menu-rgb:255,207,90}.quickBtn:nth-child(6),.quickBtn:nth-child(13),.quickBtn:nth-child(15){--menu-rgb:68,240,164}.quickBtn:nth-child(8),.quickBtn:nth-child(10),.quickBtn:nth-child(14){--menu-rgb:83,139,255}.quickBtn:nth-child(9){--menu-rgb:255,94,133}.quickBtn:nth-child(11){--menu-rgb:255,138,69}
+.quickBtn:hover{border-color:rgba(var(--menu-rgb),.72);background:linear-gradient(145deg,rgba(var(--menu-rgb),.18),rgba(10,27,47,.96));box-shadow:0 0 18px rgba(var(--menu-rgb),.10)}
+.quickBtn.active{border-color:rgb(var(--menu-rgb));background:linear-gradient(145deg,rgba(var(--menu-rgb),.25),rgba(12,31,52,.98));box-shadow:0 0 20px rgba(var(--menu-rgb),.16)}
+.navBtn:hover{transform:translateY(-1px);border-color:rgba(38,232,255,.55);background:rgba(14,42,68,.92)}
+.navBtn.active{border-color:var(--cyan);background:linear-gradient(145deg,rgba(20,77,108,.95),rgba(16,42,72,.95));color:#fff;box-shadow:0 0 20px rgba(38,232,255,.12)}
+.topActions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.menuToggle{display:none;align-items:center;gap:7px;border:1px solid rgba(184,117,255,.45);background:linear-gradient(145deg,rgba(75,39,119,.62),rgba(24,28,58,.92));color:#fff;border-radius:12px;padding:9px 12px;cursor:pointer;font-size:12px;font-weight:850;box-shadow:0 0 22px rgba(184,117,255,.10)}
+.menuToggle:hover{border-color:var(--purple)}.menuIcon{font-size:17px;line-height:1}
+.navPanel{position:fixed;top:78px;right:16px;width:min(1040px,calc(100vw - 32px));max-height:calc(100vh - 94px);overflow-y:auto;z-index:1190;padding:14px;border:1px solid rgba(38,232,255,.30);border-radius:20px;background:linear-gradient(155deg,rgba(7,17,33,.99),rgba(8,12,27,.99));box-shadow:0 28px 80px rgba(0,0,0,.62),0 0 42px rgba(38,232,255,.08);opacity:0;visibility:hidden;transform:translateY(-8px) scale(.99);transition:.17s ease}
+.navPanel.open{opacity:1;visibility:visible;transform:none}
+.navPanelHead{display:flex;align-items:center;justify-content:space-between;padding:2px 3px 12px}.navPanelHead b{font-size:14px}.navPanelHead button{width:34px;height:34px;border:1px solid rgba(255,255,255,.15);border-radius:10px;background:#0d1a2d;color:#fff;font-size:22px;cursor:pointer}
+.navGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.navGrid .navBtn{display:flex;align-items:center;gap:8px;min-height:46px}.navGrid .navBtn span{width:24px;text-align:center;font-size:16px;margin:0}
+.menuBackdrop{position:fixed;inset:0;z-index:1100;background:rgba(0,4,12,.66);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.17s}
+.menuBackdrop.open{opacity:1;visibility:visible}
+.pwaInstallBtn{position:static;left:auto;bottom:auto;z-index:auto;padding:7px 10px;gap:7px;border-radius:12px;border:1px solid rgba(68,240,164,.46);background:linear-gradient(145deg,rgba(18,78,60,.80),rgba(8,38,37,.94));box-shadow:0 0 22px rgba(68,240,164,.10);font-size:11px;white-space:nowrap}
+.pwaInstallBtn.show{display:flex}.pwaInstallBtn img{width:27px;height:27px;border-radius:8px}.pwaInstallBtn small{display:none}
+.shell{max-width:1480px;padding:24px 20px 34px}
+.page{--accent-rgb:38,232,255}.page[data-page="work"],.page[data-page="loe"]{--accent-rgb:255,85,213}.page[data-page="education"],.page[data-page="commonlaw"]{--accent-rgb:184,117,255}.page[data-page="language"],.page[data-page="funds"]{--accent-rgb:255,207,90}.page[data-page="child"],.page[data-page="upload"]{--accent-rgb:68,240,164}.page[data-page="police"],.page[data-page="forms"]{--accent-rgb:83,139,255}.page[data-page="medical"]{--accent-rgb:255,94,133}.page[data-page="translation"]{--accent-rgb:255,138,69}.page[data-page="crs"]{--accent-rgb:38,232,255}.page[data-page="sources"]{--accent-rgb:68,240,164}
+.pageHero{padding:19px 21px;border-radius:18px;border-color:rgba(var(--accent-rgb),.38);background:linear-gradient(145deg,rgba(var(--accent-rgb),.10),rgba(7,17,31,.96) 46%);box-shadow:0 16px 42px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.025)}
+.heroIcon{width:52px;height:52px;border-radius:15px;font-size:25px;background:rgba(var(--accent-rgb),.10);border-color:rgba(var(--accent-rgb),.40);box-shadow:0 0 25px rgba(var(--accent-rgb),.10)}
+.pageHero h1{margin:0;font-size:clamp(23px,3vw,34px);letter-spacing:-.7px}.pageHero p{font-size:12px}.eyebrow{display:none}
+.pageTools{margin:13px 2px;color:#8298ad}.pageTools b{color:rgb(var(--accent-rgb));font-size:15px}.printPage{border-color:rgba(var(--accent-rgb),.30);background:rgba(9,24,42,.86);font-size:11px}
+.docList{gap:9px}.docItem{border-color:rgba(var(--accent-rgb),.18);border-radius:15px;background:linear-gradient(145deg,rgba(13,27,46,.96),rgba(6,16,30,.97));box-shadow:0 8px 25px rgba(0,0,0,.12)}.docItem:hover{border-color:rgba(var(--accent-rgb),.48);transform:translateY(-1px);box-shadow:0 12px 30px rgba(0,0,0,.20),0 0 24px rgba(var(--accent-rgb),.05)}
+.docNo{background:rgba(var(--accent-rgb),.08);border-color:rgba(var(--accent-rgb),.34);color:rgb(var(--accent-rgb));box-shadow:0 0 18px rgba(var(--accent-rgb),.07)}
+.docText h3{font-size:14px}.docText p{color:#a8bbcd}
+.homeHero{min-height:210px;padding:34px 38px;border-radius:25px;grid-template-columns:1fr auto;border-color:rgba(38,232,255,.34);background:radial-gradient(circle at 84% 20%,rgba(255,85,213,.20),transparent 27%),radial-gradient(circle at 68% 100%,rgba(68,240,164,.12),transparent 31%),linear-gradient(145deg,rgba(12,34,58,.98),rgba(5,13,28,.99));box-shadow:0 22px 65px rgba(0,0,0,.35),0 0 50px rgba(38,232,255,.06)}
+.homeKicker{font-size:10px;font-weight:900;letter-spacing:2px;color:var(--cyan)}.homeHero h1{font-size:clamp(40px,7vw,72px);margin:6px 0 8px;letter-spacing:-3px}.homeHero p{font-size:15px;color:#aec1d4}
+.homeBadge{width:130px;height:130px;border-radius:34px;display:grid;place-content:center;text-align:center;border:1px solid rgba(255,85,213,.42);background:linear-gradient(145deg,rgba(255,85,213,.15),rgba(38,232,255,.08));box-shadow:0 0 38px rgba(255,85,213,.12)}.homeBadge b{font-size:42px;line-height:1}.homeBadge span{margin-top:7px;font-size:11px;color:#b8cadb;font-weight:750}
+.homeSectionTitle{display:flex;align-items:end;justify-content:space-between;margin:24px 3px 12px}.homeSectionTitle h2{margin:0;font-size:18px}.homeSectionTitle span{font-size:11px;color:var(--muted)}
+.homeModules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.homeModule{--card-rgb:38,232,255;display:grid;grid-template-columns:46px minmax(0,1fr);gap:12px;align-items:center;text-align:left;color:var(--text);border:1px solid rgba(var(--card-rgb),.25);border-radius:17px;padding:15px;background:linear-gradient(145deg,rgba(var(--card-rgb),.09),rgba(7,18,33,.97) 48%);cursor:pointer;transition:.17s;box-shadow:0 10px 28px rgba(0,0,0,.15)}.homeModule:hover{transform:translateY(-2px);border-color:rgba(var(--card-rgb),.60);box-shadow:0 15px 34px rgba(0,0,0,.24),0 0 26px rgba(var(--card-rgb),.08)}.homeModule>span{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:21px;background:rgba(var(--card-rgb),.09);border:1px solid rgba(var(--card-rgb),.28)}.homeModule b{display:block;font-size:13px}.homeModule small{display:block;color:#8fa5b9;font-size:10px;line-height:1.4;margin-top:4px}
+.homeModule:nth-child(2),.homeModule:nth-child(12){--card-rgb:255,85,213}.homeModule:nth-child(3),.homeModule:nth-child(5){--card-rgb:184,117,255}.homeModule:nth-child(4),.homeModule:nth-child(7){--card-rgb:255,207,90}.homeModule:nth-child(6),.homeModule:nth-child(13),.homeModule:nth-child(15){--card-rgb:68,240,164}.homeModule:nth-child(8),.homeModule:nth-child(10){--card-rgb:83,139,255}.homeModule:nth-child(9){--card-rgb:255,94,133}.homeModule:nth-child(11){--card-rgb:255,138,69}
+.sourceGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.sourceGrid a{--src-rgb:38,232,255;border-color:rgba(var(--src-rgb),.25);background:linear-gradient(145deg,rgba(var(--src-rgb),.08),rgba(7,17,31,.98));min-height:104px}.sourceGrid a:nth-child(3n+2){--src-rgb:184,117,255}.sourceGrid a:nth-child(3n){--src-rgb:68,240,164}.sourceGrid a:hover{border-color:rgba(var(--src-rgb),.62);box-shadow:0 0 28px rgba(var(--src-rgb),.08)}.sourceGrid b{font-size:13px}.sourceGrid span{color:#92a8bc}
+#crsFrame{height:calc(100vh - 145px);min-height:700px;border-color:rgba(38,232,255,.26);border-radius:17px}
+.footer{display:none}
+@media(max-width:1450px) and (min-width:1101px){.topbar{padding-left:10px;padding-right:10px;gap:8px}.brand{min-width:142px}.brand small{display:none}.pwaInstallBtn .installLabel{display:none}.pwaInstallBtn{padding:6px}.quickNav{gap:3px}.quickBtn{font-size:8.5px;padding-left:2px;padding-right:2px}}
+@media(max-width:1100px){.quickNav{display:none}.brand{flex:1}.menuToggle{display:flex}.navGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.homeModules{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){:root{--navh:62px}.topbar{height:62px;min-height:62px;padding:7px 10px;gap:8px}.brand{min-width:0;flex:1}.brandMark{width:38px;height:38px;border-radius:12px}.brand b{display:block;font-size:14px}.brand small{display:none}.topActions{gap:6px}.menuToggle{padding:9px 10px}.menuToggle span:last-child{display:none}.installLabel{display:none}.pwaInstallBtn{padding:5px}.pwaInstallBtn img{width:30px;height:30px}.navPanel{top:68px;left:8px;right:8px;width:auto;max-height:calc(100vh - 76px);padding:11px;border-radius:17px}.navGrid{grid-template-columns:1fr;gap:7px}.navGrid .navBtn{min-height:44px}.shell{padding:12px 10px 26px}.homeHero{min-height:176px;padding:24px 20px;display:flex;align-items:center}.homeHero h1{font-size:43px;letter-spacing:-2px}.homeHero p{font-size:12px;max-width:250px}.homeBadge{display:none}.homeSectionTitle{margin-top:18px}.homeModules{grid-template-columns:1fr;gap:8px}.homeModule{padding:12px;border-radius:15px}.pageHero{padding:14px 15px;gap:12px}.heroIcon{width:46px;height:46px;font-size:22px}.pageHero h1{font-size:23px}.pageTools{margin:10px 2px}.docItem{grid-template-columns:37px minmax(0,1fr);padding:10px}.docNo{width:34px;height:34px}.sourceGrid{grid-template-columns:1fr}.sourceGrid a{min-height:auto}.pwaHelp{padding:10px}#crsFrame{height:calc(100vh - 104px);min-height:620px}}
+@media print{.menuToggle,.navPanel,.menuBackdrop,.quickNav{display:none!important}}
+
 </style>
 </head>
 <body>
 <header class="topbar">
-<div class="brand"><div class="brandMark">🍁</div><div><b>Canada PR Master</b><small>Nguyễn Nhật Điền • Thu • 1 con</small></div></div>
-<div class="navWrap"><nav aria-label="Điều hướng" class="nav"><button class="navBtn active" data-page="identity"><span>🪪</span>Nhân thân &amp; hộ tịch</button><button class="navBtn" data-page="work"><span>💼</span>Kinh nghiệm làm việc &amp; NOC</button><button class="navBtn" data-page="education"><span>🎓</span>Học vấn &amp; ECA</button><button class="navBtn" data-page="language"><span>🗣️</span>Ngôn ngữ</button><button class="navBtn" data-page="commonlaw"><span>🤝</span>Common-law relationship</button><button class="navBtn" data-page="child"><span>👶</span>Con phụ thuộc</button><button class="navBtn" data-page="funds"><span>💰</span>Proof of Funds</button><button class="navBtn" data-page="police"><span>🛡️</span>Police Certificates &amp; lịch sử 10 năm</button><button class="navBtn" data-page="medical"><span>🩺</span>Medical, biometrics, ảnh &amp; phí</button><button class="navBtn" data-page="forms"><span>🧾</span>Biểu mẫu &amp; dữ liệu online</button><button class="navBtn" data-page="translation"><span>🌐</span>Dịch thuật, chứng thực &amp; scan</button><button class="navBtn" data-page="loe"><span>✍️</span>Letter of Explanation</button><button class="navBtn" data-page="extras"><span>🚀</span>Tài liệu tăng sức mạnh &amp; tình huống chiến lược</button><button class="navBtn" data-page="upload"><span>📁</span>Đóng file &amp; cấu trúc upload</button><button class="navBtn" data-page="crs"><span>📊</span>CRS</button><button class="navBtn" data-page="sources"><span>🔗</span>Nguồn</button></nav></div>
+<button class="brand brandButton" data-goto="home" type="button" aria-label="Về trang chủ">
+  <div class="brandMark">🍁</div>
+  <div><b>Canada PR</b><small>Hồ sơ Express Entry</small></div>
+</button>
+<nav class="quickNav" aria-label="15 danh mục hồ sơ">
+  <button class="navBtn quickBtn" data-page="identity" type="button">Nhân thân</button>
+  <button class="navBtn quickBtn" data-page="work" type="button">NOC</button>
+  <button class="navBtn quickBtn" data-page="education" type="button">Học vấn</button>
+  <button class="navBtn quickBtn" data-page="language" type="button">IELTS &amp; TCF</button>
+  <button class="navBtn quickBtn" data-page="commonlaw" type="button">Common-law</button>
+  <button class="navBtn quickBtn" data-page="child" type="button">Con</button>
+  <button class="navBtn quickBtn" data-page="funds" type="button">Tài chính</button>
+  <button class="navBtn quickBtn" data-page="police" type="button">Tư pháp</button>
+  <button class="navBtn quickBtn" data-page="medical" type="button">Y tế</button>
+  <button class="navBtn quickBtn" data-page="forms" type="button">Biểu mẫu</button>
+  <button class="navBtn quickBtn" data-page="translation" type="button">Dịch thuật</button>
+  <button class="navBtn quickBtn" data-page="loe" type="button">LOE</button>
+  <button class="navBtn quickBtn" data-page="upload" type="button">Hồ sơ</button>
+  <button class="navBtn quickBtn" data-page="crs" type="button">CRS</button>
+  <button class="navBtn quickBtn" data-page="sources" type="button">Nguồn</button>
+</nav>
+<div class="topActions">
+  <button aria-label="Cài Canada PR" class="pwaInstallBtn" id="installAppBtn" type="button">
+    <img alt="" src="./icon-192.png"/>
+    <span class="installLabel">Cài app</span>
+  </button>
+  <button class="menuToggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navPanel">
+    <span class="menuIcon" aria-hidden="true">☰</span><span>Danh mục</span>
+  </button>
+</div>
 </header>
-<main class="shell"><section class="page active" data-page="identity" id="page-identity"><div class="pageHero"><div class="heroIcon">🪪</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Nhân thân &amp; hộ tịch</h1></div></div>
-<div class="pageTools"><div><b>9</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+<div class="navPanel" id="navPanel" aria-hidden="true">
+  <div class="navPanelHead"><b>Danh mục</b><button id="menuClose" type="button" aria-label="Đóng menu">×</button></div>
+  <nav aria-label="Toàn bộ danh mục" class="navGrid">
+    <button class="navBtn" data-page="home" type="button"><span>⌂</span>Trang chủ</button>
+    <button class="navBtn" data-page="identity" type="button"><span>🪪</span>Nhân thân</button>
+    <button class="navBtn" data-page="work" type="button"><span>💼</span>Kinh nghiệm &amp; NOC</button>
+    <button class="navBtn" data-page="education" type="button"><span>🎓</span>Học vấn &amp; ECA</button>
+    <button class="navBtn" data-page="language" type="button"><span>🗣️</span>IELTS &amp; TCF</button>
+    <button class="navBtn" data-page="commonlaw" type="button"><span>🤝</span>Quan hệ common-law</button>
+    <button class="navBtn" data-page="child" type="button"><span>👶</span>Con phụ thuộc</button>
+    <button class="navBtn" data-page="funds" type="button"><span>💰</span>Chứng minh tài chính</button>
+    <button class="navBtn" data-page="police" type="button"><span>🛡️</span>Lý lịch tư pháp</button>
+    <button class="navBtn" data-page="medical" type="button"><span>🩺</span>Y tế, sinh trắc &amp; phí</button>
+    <button class="navBtn" data-page="forms" type="button"><span>🧾</span>Biểu mẫu trực tuyến</button>
+    <button class="navBtn" data-page="translation" type="button"><span>🌐</span>Dịch thuật &amp; scan</button>
+    <button class="navBtn" data-page="loe" type="button"><span>✍️</span>Thư giải trình (LOE)</button>
+    <button class="navBtn" data-page="upload" type="button"><span>📁</span>Sắp xếp hồ sơ</button>
+    <button class="navBtn" data-page="crs" type="button"><span>📊</span>Tính điểm CRS</button>
+    <button class="navBtn" data-page="sources" type="button"><span>🔗</span>Nguồn chính thức</button>
+  </nav>
+</div>
+<div class="menuBackdrop" id="menuBackdrop" aria-hidden="true"></div>
+<main class="shell"><section class="page active" data-page="home" id="page-home">
+  <div class="homeHero panelGlow">
+    <div>
+      <div class="homeKicker">EXPRESS ENTRY</div>
+      <h1>Canada PR</h1>
+      <p>Hồ sơ, điểm CRS và nguồn chính thức trong một nơi.</p>
+    </div>
+    <div class="homeBadge"><b>15</b><span>danh mục</span></div>
+  </div>
+  <div class="homeSectionTitle"><h2>Danh mục hồ sơ</h2><span>Chọn mục cần xem</span></div>
+  <div class="homeModules">
+    <button class="homeModule" data-goto="identity" type="button"><span>🪪</span><div><b>Nhân thân</b><small>Hộ chiếu, tên và hộ tịch</small></div></button>
+    <button class="homeModule" data-goto="work" type="button"><span>💼</span><div><b>Kinh nghiệm &amp; NOC</b><small>Thư việc làm, nhiệm vụ và mã nghề</small></div></button>
+    <button class="homeModule" data-goto="education" type="button"><span>🎓</span><div><b>Học vấn &amp; ECA</b><small>Bằng cấp, bảng điểm và đánh giá</small></div></button>
+    <button class="homeModule" data-goto="language" type="button"><span>🗣️</span><div><b>IELTS &amp; TCF</b><small>Kết quả tiếng Anh và tiếng Pháp</small></div></button>
+    <button class="homeModule" data-goto="commonlaw" type="button"><span>🤝</span><div><b>Quan hệ common-law</b><small>Bằng chứng sống chung và IMM 5409</small></div></button>
+    <button class="homeModule" data-goto="child" type="button"><span>👶</span><div><b>Con phụ thuộc</b><small>Hộ chiếu, khai sinh và quyền giám hộ</small></div></button>
+    <button class="homeModule" data-goto="funds" type="button"><span>💰</span><div><b>Chứng minh tài chính</b><small>Thư ngân hàng và lịch sử số dư</small></div></button>
+    <button class="homeModule" data-goto="police" type="button"><span>🛡️</span><div><b>Lý lịch tư pháp</b><small>Quốc gia cư trú và lịch sử 10 năm</small></div></button>
+    <button class="homeModule" data-goto="medical" type="button"><span>🩺</span><div><b>Y tế, sinh trắc &amp; phí</b><small>Khám sức khỏe, ảnh và thanh toán</small></div></button>
+    <button class="homeModule" data-goto="forms" type="button"><span>🧾</span><div><b>Biểu mẫu trực tuyến</b><small>Dữ liệu khai trên hệ thống IRCC</small></div></button>
+    <button class="homeModule" data-goto="translation" type="button"><span>🌐</span><div><b>Dịch thuật &amp; scan</b><small>Dịch, chứng thực và chuẩn hóa file</small></div></button>
+    <button class="homeModule" data-goto="loe" type="button"><span>✍️</span><div><b>Thư giải trình (LOE)</b><small>Giải thích điểm chưa thống nhất</small></div></button>
+    <button class="homeModule" data-goto="upload" type="button"><span>📁</span><div><b>Sắp xếp hồ sơ</b><small>Đặt tên, kiểm tra và tải file</small></div></button>
+    <button class="homeModule" data-goto="crs" type="button"><span>📊</span><div><b>Tính điểm CRS</b><small>Ước tính điểm và kịch bản</small></div></button>
+    <button class="homeModule" data-goto="sources" type="button"><span>🔗</span><div><b>Nguồn chính thức</b><small>IRCC, NOC và TEER</small></div></button>
+  </div>
+</section><section class="page" data-page="identity" id="page-identity"><div class="pageHero"><div class="heroIcon">🪪</div><div><h1>Nhân thân</h1></div></div>
+<div class="pageTools"><div><b>9</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="hộ chiếu hiện tại của nguyễn nhật điền scan màu trang thông tin cá nhân và các trang khác nếu personalized checklist yêu cầu; hộ chiếu phải còn hiệu lực khi tạo profile và nộp e-apr. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Hộ chiếu hiện tại của Nguyễn Nhật Điền</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Scan màu trang thông tin cá nhân và các trang khác nếu personalized checklist yêu cầu; hộ chiếu phải còn hiệu lực khi tạo profile và nộp e-APR.</p></div>
@@ -121,8 +252,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="giấy khai sinh của điền hoặc thu chỉ dùng khi ircc yêu cầu thêm hoặc cần xử lý chênh lệch tên, ngày sinh hay quan hệ gia đình. nếu áp dụng">
 <div class="docNo">9</div>
 <div class="docText"><div class="docTop"><h3>Giấy khai sinh của Điền hoặc Thu</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ dùng khi IRCC yêu cầu thêm hoặc cần xử lý chênh lệch tên, ngày sinh hay quan hệ gia đình.</p></div>
-</article></div></section><section class="page" data-page="work" id="page-work"><div class="pageHero"><div class="heroIcon">💼</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Kinh nghiệm làm việc &amp; NOC</h1></div></div>
-<div class="pageTools"><div><b>13</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="work" id="page-work"><div class="pageHero"><div class="heroIcon">💼</div><div><h1>Kinh nghiệm &amp; NOC</h1></div></div>
+<div class="pageTools"><div><b>13</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="employer reference hoặc experience letter cho từng công việc được claim trên letterhead; có pháp nhân, địa chỉ, liên hệ, người ký, chức vụ, thời gian làm việc, chức danh, giờ/tuần, lương/phúc lợi và duties thực tế. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Employer reference hoặc experience letter cho từng công việc được claim</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Trên letterhead; có pháp nhân, địa chỉ, liên hệ, người ký, chức vụ, thời gian làm việc, chức danh, giờ/tuần, lương/phúc lợi và duties thực tế.</p></div>
@@ -162,8 +293,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="thư tuyên thệ hoặc xác nhận thay thế từ quản lý, đồng nghiệp cũ chỉ dùng cùng chứng cứ độc lập khác khi employer letter không thể lấy; không tự động thay thế thư employer. nếu áp dụng">
 <div class="docNo">13</div>
 <div class="docText"><div class="docTop"><h3>Thư tuyên thệ hoặc xác nhận thay thế từ quản lý, đồng nghiệp cũ</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ dùng cùng chứng cứ độc lập khác khi employer letter không thể lấy; không tự động thay thế thư employer.</p></div>
-</article></div></section><section class="page" data-page="education" id="page-education"><div class="pageHero"><div class="heroIcon">🎓</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Học vấn &amp; ECA</h1></div></div>
-<div class="pageTools"><div><b>11</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="education" id="page-education"><div class="pageHero"><div class="heroIcon">🎓</div><div><h1>Học vấn &amp; ECA</h1></div></div>
+<div class="pageTools"><div><b>11</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="wes eca immigration-purpose của điền — ref. 6898314im báo cáo eca dùng cho express entry; phải còn trong thời hạn 5 năm khi tạo profile và nộp e-apr. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>WES ECA immigration-purpose của Điền — Ref. 6898314IM</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Báo cáo ECA dùng cho Express Entry; phải còn trong thời hạn 5 năm khi tạo profile và nộp e-APR.</p></div>
@@ -197,25 +328,22 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="wes correspondence hoặc biên nhận đánh giá hữu ích khi cần xác minh report, xử lý chênh lệch hoặc trả lời yêu cầu bổ sung. có càng tốt">
 <div class="docNo">11</div>
 <div class="docText"><div class="docTop"><h3>WES correspondence hoặc biên nhận đánh giá</h3><div class="badges"><span class="priority good">CÓ CÀNG TỐT</span></div></div><p>Hữu ích khi cần xác minh report, xử lý chênh lệch hoặc trả lời yêu cầu bổ sung.</p></div>
-</article></div></section><section class="page" data-page="language" id="page-language"><div class="pageHero"><div class="heroIcon">🗣️</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Ngôn ngữ</h1></div></div>
-<div class="pageTools"><div><b>5</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="language" id="page-language"><div class="pageHero"><div class="heroIcon">🗣️</div><div><h1>IELTS &amp; TCF</h1></div></div>
+<div class="pageTools"><div><b>4</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="ielts general training test report form hoặc e-trf của điền không dùng ielts academic; nhập đúng điểm từng kỹ năng, số report và ngày thi. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>IELTS General Training Test Report Form hoặc e-TRF của Điền</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Không dùng IELTS Academic; nhập đúng điểm từng kỹ năng, số report và ngày thi.</p></div>
 </article><article class="docItem" data-search="tcf canada attestation của điền dùng khi claim điểm tiếng pháp, điểm cộng french proficiency hoặc french-language category. nên có">
 <div class="docNo">2</div>
-<div class="docText"><div class="docTop"><h3>TCF Canada attestation của Điền</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Dùng khi claim điểm tiếng Pháp, điểm cộng French proficiency hoặc French-language category.</p></div>
+<div class="docText"><div class="docTop"><h3>Chứng nhận TCF Canada của Điền</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Dùng để khai điểm tiếng Pháp, điểm cộng tiếng Pháp hoặc nhóm tuyển chọn tiếng Pháp.</p></div>
 </article><article class="docItem" data-search="kết quả ngôn ngữ của partner chỉ cần khi claim crs spouse-language points; phải là bài thi được ircc chấp nhận và còn hiệu lực. nếu áp dụng">
 <div class="docNo">3</div>
-<div class="docText"><div class="docTop"><h3>Kết quả ngôn ngữ của partner</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ cần khi claim CRS spouse-language points; phải là bài thi được IRCC chấp nhận và còn hiệu lực.</p></div>
-</article><article class="docItem" data-search="kết quả celpip-general, pte core hoặc tef canada thay thế chỉ khi thực tế dùng một trong các bài thi này thay ielts general hoặc tcf canada. nếu áp dụng">
-<div class="docNo">4</div>
-<div class="docText"><div class="docTop"><h3>Kết quả CELPIP-General, PTE Core hoặc TEF Canada thay thế</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi thực tế dùng một trong các bài thi này thay IELTS General hoặc TCF Canada.</p></div>
+<div class="docText"><div class="docTop"><h3>Kết quả IELTS hoặc TCF của người đi cùng</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ cần khi khai điểm ngôn ngữ cho người đi cùng; kết quả phải còn hiệu lực.</p></div>
 </article><article class="docItem" data-search="số certificate/report, ngày thi và điểm từng kỹ năng dữ liệu phải nhập trùng khớp tuyệt đối với kết quả chính thức. dữ liệu phải khai">
-<div class="docNo">5</div>
-<div class="docText"><div class="docTop"><h3>Số certificate/report, ngày thi và điểm từng kỹ năng</h3><div class="badges"><span class="priority data">DỮ LIỆU PHẢI KHAI</span></div></div><p>Dữ liệu phải nhập trùng khớp tuyệt đối với kết quả chính thức.</p></div>
-</article></div></section><section class="page" data-page="commonlaw" id="page-commonlaw"><div class="pageHero"><div class="heroIcon">🤝</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Common-law relationship</h1></div></div>
-<div class="pageTools"><div><b>15</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+<div class="docNo">4</div>
+<div class="docText"><div class="docTop"><h3>Số chứng nhận, ngày thi và điểm từng kỹ năng</h3><div class="badges"><span class="priority data">DỮ LIỆU PHẢI KHAI</span></div></div><p>Dữ liệu phải nhập trùng khớp tuyệt đối với kết quả chính thức.</p></div>
+</article></div></section><section class="page" data-page="commonlaw" id="page-commonlaw"><div class="pageHero"><div class="heroIcon">🤝</div><div><h1>Quan hệ common-law</h1></div></div>
+<div class="pageTools"><div><b>15</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="imm 5409 — statutory declaration of common-law union hoàn tất đúng phiên bản và hình thức ký/chứng kiến theo personalized checklist. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>IMM 5409 — Statutory Declaration of Common-Law Union</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Hoàn tất đúng phiên bản và hình thức ký/chứng kiến theo personalized checklist.</p></div>
@@ -258,8 +386,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="bảo hiểm, tài khoản tín dụng hoặc tài sản đứng tên chung bổ sung nếu thực tế có và giấy tờ đủ rõ. có càng tốt">
 <div class="docNo">15</div>
 <div class="docText"><div class="docTop"><h3>Bảo hiểm, tài khoản tín dụng hoặc tài sản đứng tên chung</h3><div class="badges"><span class="priority good">CÓ CÀNG TỐT</span></div></div><p>Bổ sung nếu thực tế có và giấy tờ đủ rõ.</p></div>
-</article></div></section><section class="page" data-page="child" id="page-child"><div class="pageHero"><div class="heroIcon">👶</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Con phụ thuộc</h1></div></div>
-<div class="pageTools"><div><b>7</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="child" id="page-child"><div class="pageHero"><div class="heroIcon">👶</div><div><h1>Con phụ thuộc</h1></div></div>
+<div class="pageTools"><div><b>7</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="giấy khai sinh của con chứng minh ngày sinh và quan hệ cha/mẹ/con; nộp scan gốc cùng bản dịch theo chuẩn ircc. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Giấy khai sinh của con</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Chứng minh ngày sinh và quan hệ cha/mẹ/con; nộp scan gốc cùng bản dịch theo chuẩn IRCC.</p></div>
@@ -278,8 +406,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="chứng cứ tiếp tục phụ thuộc nếu con từ 22 tuổi trở lên chỉ khi claim dependent do phụ thuộc tài chính từ trước 22 tuổi vì tình trạng thể chất hoặc tinh thần. nếu áp dụng">
 <div class="docNo">7</div>
 <div class="docText"><div class="docTop"><h3>Chứng cứ tiếp tục phụ thuộc nếu con từ 22 tuổi trở lên</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi claim dependent do phụ thuộc tài chính từ trước 22 tuổi vì tình trạng thể chất hoặc tinh thần.</p></div>
-</article></div></section><section class="page" data-page="funds" id="page-funds"><div class="pageHero"><div class="heroIcon">💰</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Proof of Funds</h1></div></div>
-<div class="pageTools"><div><b>9</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="funds" id="page-funds"><div class="pageHero"><div class="heroIcon">💰</div><div><h1>Chứng minh tài chính</h1></div></div>
+<div class="pageTools"><div><b>9</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="official bank letter của từng ngân hàng hoặc tổ chức tài chính trên letterhead; có thông tin liên hệ, tên chủ tài khoản, outstanding debts và đối với từng tài khoản: số tài khoản, ngày mở, current balance và average balance 6 tháng. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Official bank letter của từng ngân hàng hoặc tổ chức tài chính</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Trên letterhead; có thông tin liên hệ, tên chủ tài khoản, outstanding debts và đối với từng tài khoản: số tài khoản, ngày mở, current balance và average balance 6 tháng.</p></div>
@@ -307,8 +435,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="bank letter hoặc statement cập nhật trong quá trình xử lý chỉ khi ircc yêu cầu hoặc số dư/tài khoản thay đổi sau e-apr. nếu áp dụng">
 <div class="docNo">9</div>
 <div class="docText"><div class="docTop"><h3>Bank letter hoặc statement cập nhật trong quá trình xử lý</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi IRCC yêu cầu hoặc số dư/tài khoản thay đổi sau e-APR.</p></div>
-</article></div></section><section class="page" data-page="police" id="page-police"><div class="pageHero"><div class="heroIcon">🛡️</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Police Certificates</h1></div></div>
-<div class="pageTools"><div><b>8</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="police" id="page-police"><div class="pageHero"><div class="heroIcon">🛡️</div><div><h1>Lý lịch tư pháp</h1></div></div>
+<div class="pageTools"><div><b>8</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="phiếu lý lịch tư pháp số 2 của điền tại việt nam pcc của quốc gia đang cư trú; phải đáp ứng yêu cầu thời điểm cấp tại ngày nộp e-apr. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Phiếu Lý lịch tư pháp số 2 của Điền tại Việt Nam</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>PCC của quốc gia đang cư trú; phải đáp ứng yêu cầu thời điểm cấp tại ngày nộp e-APR.</p></div>
@@ -333,8 +461,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="proof đã yêu cầu pcc đúng cơ quan và đúng hướng dẫn dùng khi không thể nhận pcc trước deadline; nộp cùng giải thích theo ô country-specific. nếu áp dụng">
 <div class="docNo">8</div>
 <div class="docText"><div class="docTop"><h3>Proof đã yêu cầu PCC đúng cơ quan và đúng hướng dẫn</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Dùng khi không thể nhận PCC trước deadline; nộp cùng giải thích theo ô country-specific.</p></div>
-</article></div></section><section class="page" data-page="medical" id="page-medical"><div class="pageHero"><div class="heroIcon">🩺</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Medical, biometrics, ảnh &amp; phí</h1></div></div>
-<div class="pageTools"><div><b>12</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="medical" id="page-medical"><div class="pageHero"><div class="heroIcon">🩺</div><div><h1>Y tế, sinh trắc &amp; phí</h1></div></div>
+<div class="pageTools"><div><b>12</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="upfront medical confirmation của điền giấy xác nhận/information sheet hoặc ime number do panel physician cấp để khai hoặc upload theo checklist. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Upfront medical confirmation của Điền</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Giấy xác nhận/information sheet hoặc IME number do panel physician cấp để khai hoặc upload theo checklist.</p></div>
@@ -368,8 +496,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="biometrics của con nếu đủ 14 tuổi tại thời điểm nộp chỉ áp dụng khi con thuộc độ tuổi phải cung cấp biometrics; trẻ dưới 14 tuổi được miễn theo quy định hiện hành. nếu áp dụng"><div class="docNo">11</div><div class="docText"><div class="docTop"><h3>Biometrics của con nếu đủ 14 tuổi tại thời điểm nộp</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ áp dụng khi con thuộc độ tuổi phải cung cấp biometrics; trẻ dưới 14 tuổi được miễn theo quy định hiện hành.</p></div></article><article class="docItem" data-search="processing fee và right of permanent residence fee receipt thanh toán theo portal; rprf áp dụng cho người lớn, không áp dụng cho dependent child. nên có">
 <div class="docNo">12</div>
 <div class="docText"><div class="docTop"><h3>Processing fee và Right of Permanent Residence Fee receipt</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Thanh toán theo portal; RPRF áp dụng cho người lớn, không áp dụng cho dependent child.</p></div>
-</article></div></section><section class="page" data-page="forms" id="page-forms"><div class="pageHero"><div class="heroIcon">🧾</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Biểu mẫu &amp; dữ liệu online</h1></div></div>
-<div class="pageTools"><div><b>15</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="forms" id="page-forms"><div class="pageHero"><div class="heroIcon">🧾</div><div><h1>Biểu mẫu trực tuyến</h1></div></div>
+<div class="pageTools"><div><b>15</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="express entry profile number và invitation to apply letter lưu profile number, submission confirmation, ita letter và deadline e-apr để quản trị hồ sơ; không phải tài liệu phải upload lại. nên có">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Express Entry profile number và Invitation to Apply letter</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Lưu profile number, submission confirmation, ITA letter và deadline e-APR để quản trị hồ sơ; không phải tài liệu phải upload lại.</p></div>
@@ -415,8 +543,8 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="schedule a/imm 5669, imm 5406 hoặc form bổ sung chỉ hoàn tất khi personalized checklist hoặc ircc yêu cầu. nếu áp dụng">
 <div class="docNo">15</div>
 <div class="docText"><div class="docTop"><h3>Schedule A/IMM 5669, IMM 5406 hoặc form bổ sung</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ hoàn tất khi personalized checklist hoặc IRCC yêu cầu.</p></div>
-</article></div></section><section class="page" data-page="translation" id="page-translation"><div class="pageHero"><div class="heroIcon">🌐</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Dịch thuật, chứng thực &amp; scan</h1></div></div>
-<div class="pageTools"><div><b>9</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="translation" id="page-translation"><div class="pageHero"><div class="heroIcon">🌐</div><div><h1>Dịch thuật &amp; scan</h1></div></div>
+<div class="pageTools"><div><b>9</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="bản scan màu rõ nét của tài liệu gốc scan đầy đủ cả mặt trước/sau, số trang, dấu, ghi chú và mép tài liệu; không crop nội dung. bắt buộc">
 <div class="docNo">1</div>
 <div class="docText"><div class="docTop"><h3>Bản scan màu rõ nét của tài liệu gốc</h3><div class="badges"><span class="priority req">BẮT BUỘC</span></div></div><p>Scan đầy đủ cả mặt trước/sau, số trang, dấu, ghi chú và mép tài liệu; không crop nội dung.</p></div>
@@ -444,11 +572,11 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="bản giấy gốc, bản dịch gốc và affidavit/certification lưu giữ để xuất trình hoặc nộp bổ sung khi ircc yêu cầu. nên có">
 <div class="docNo">9</div>
 <div class="docText"><div class="docTop"><h3>Bản giấy gốc, bản dịch gốc và affidavit/certification</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Lưu giữ để xuất trình hoặc nộp bổ sung khi IRCC yêu cầu.</p></div>
-</article></div></section><section class="page" data-page="loe" id="page-loe"><div class="pageHero"><div class="heroIcon">✍️</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Letter of Explanation</h1></div></div>
-<div class="pageTools"><div><b>11</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="loe" id="page-loe"><div class="pageHero"><div class="heroIcon">✍️</div><div><h1>Thư giải trình (LOE)</h1></div></div>
+<div class="pageTools"><div><b>11</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="master loe hoặc client information cover letter bản ngắn để lập mục lục các vấn đề và dẫn chiếu tài liệu; chỉ dùng nếu giúp officer đọc hồ sơ dễ hơn. nên có">
 <div class="docNo">1</div>
-<div class="docText"><div class="docTop"><h3>Master LOE hoặc Client Information cover letter</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Bản ngắn để lập mục lục các vấn đề và dẫn chiếu tài liệu; chỉ dùng nếu giúp officer đọc hồ sơ dễ hơn.</p></div>
+<div class="docText"><div class="docTop"><h3>Thư LOE tổng hợp hoặc thư mục lục hồ sơ</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Bản ngắn để lập mục lục các vấn đề và dẫn chiếu tài liệu; chỉ dùng khi giúp viên chức xét duyệt đọc hồ sơ dễ hơn.</p></div>
 </article><article class="docItem" data-search="loe về đổi tên pháp lý và name mapping nối tên cũ trên advanced diploma với giấy đổi tên, hộ chiếu hiện tại và cách wes hiển thị tên. nên có">
 <div class="docNo">2</div>
 <div class="docText"><div class="docTop"><h3>LOE về đổi tên pháp lý và name mapping</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Nối tên cũ trên Advanced Diploma với giấy đổi tên, hộ chiếu hiện tại và cách WES hiển thị tên.</p></div>
@@ -479,46 +607,20 @@ window.addEventListener("beforeinstallprompt", function (event) {
 </article><article class="docItem" data-search="loe về tài liệu không thể lấy nêu lý do khách quan, nỗ lực thực hiện và chứng cứ thay thế; không dùng lý do chung chung. nếu áp dụng">
 <div class="docNo">11</div>
 <div class="docText"><div class="docTop"><h3>LOE về tài liệu không thể lấy</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Nêu lý do khách quan, nỗ lực thực hiện và chứng cứ thay thế; không dùng lý do chung chung.</p></div>
-</article></div></section><section class="page" data-page="extras" id="page-extras"><div class="pageHero"><div class="heroIcon">🚀</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Tài liệu chiến lược &amp; tình huống phát sinh</h1></div></div>
-<div class="pageTools"><div><b>8</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
-<div class="docList"><article class="docItem" data-search="provincial nomination certificate và nomination correspondence bắt buộc nếu nhận và chấp nhận nomination qua express entry. nếu áp dụng">
-<div class="docNo">1</div>
-<div class="docText"><div class="docTop"><h3>Provincial Nomination Certificate và nomination correspondence</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Bắt buộc nếu nhận và chấp nhận nomination qua Express Entry.</p></div>
-</article><article class="docItem" data-search="proof of sibling in canada giấy khai sinh tạo chuỗi quan hệ, proof citizenship/pr và proof residence in canada nếu claim 15 crs points. nếu áp dụng">
-<div class="docNo">2</div>
-<div class="docText"><div class="docTop"><h3>Proof of sibling in Canada</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Giấy khai sinh tạo chuỗi quan hệ, proof citizenship/PR và proof residence in Canada nếu claim 15 CRS points.</p></div>
-</article><article class="docItem" data-search="proof of canadian education credential, transcript và proof study in canada nếu claim additional crs points. nếu áp dụng">
-<div class="docNo">3</div>
-<div class="docText"><div class="docTop"><h3>Proof of Canadian education</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Credential, transcript và proof study in Canada nếu claim additional CRS points.</p></div>
-</article><article class="docItem" data-search="written job offer, lmia và work permit documents chỉ khi dùng cho eligibility, arranged employment hoặc chương trình/pnp liên quan. nếu áp dụng">
-<div class="docNo">4</div>
-<div class="docText"><div class="docTop"><h3>Written job offer, LMIA và work permit documents</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi dùng cho eligibility, arranged employment hoặc chương trình/PNP liên quan.</p></div>
-</article><article class="docItem" data-search="certificate of qualification in a canadian trade chỉ khi claim điểm hoặc eligibility thuộc skilled trades. nếu áp dụng">
-<div class="docNo">5</div>
-<div class="docText"><div class="docTop"><h3>Certificate of qualification in a Canadian trade</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi claim điểm hoặc eligibility thuộc skilled trades.</p></div>
-</article><article class="docItem" data-search="professional licence hoặc registration chỉ khi occupation, employer hoặc province yêu cầu để chứng minh khả năng hành nghề. nếu áp dụng">
-<div class="docNo">6</div>
-<div class="docText"><div class="docTop"><h3>Professional licence hoặc registration</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi occupation, employer hoặc province yêu cầu để chứng minh khả năng hành nghề.</p></div>
-</article><article class="docItem" data-search="settlement plan và bằng chứng connection to province chỉ khi stream pnp yêu cầu ý định cư trú hoặc ties với tỉnh bang. nếu áp dụng">
-<div class="docNo">7</div>
-<div class="docText"><div class="docTop"><h3>Settlement plan và bằng chứng connection to province</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi stream PNP yêu cầu ý định cư trú hoặc ties với tỉnh bang.</p></div>
-</article><article class="docItem" data-search="legal opinion chuyên môn chỉ khi có vấn đề phức tạp về inadmissibility, criminality, misrepresentation, custody hoặc cấu trúc pháp lý. nếu áp dụng">
-<div class="docNo">8</div>
-<div class="docText"><div class="docTop"><h3>Legal opinion chuyên môn</h3><div class="badges"><span class="priority cond">NẾU ÁP DỤNG</span></div></div><p>Chỉ khi có vấn đề phức tạp về inadmissibility, criminality, misrepresentation, custody hoặc cấu trúc pháp lý.</p></div>
-</article></div></section><section class="page" data-page="upload" id="page-upload"><div class="pageHero"><div class="heroIcon">📁</div><div><div class="eyebrow">CANADA PR MASTER FILE</div><h1>Đóng file &amp; cấu trúc upload</h1></div></div>
-<div class="pageTools"><div><b>11</b> mục tài liệu/dữ liệu</div><button class="printPage" type="button">In trang này</button></div>
+</article></div></section><section class="page" data-page="upload" id="page-upload"><div class="pageHero"><div class="heroIcon">📁</div><div><h1>Sắp xếp hồ sơ</h1></div></div>
+<div class="pageTools"><div><b>11</b> mục</div><button class="printPage" type="button">In trang này</button></div>
 <div class="docList"><article class="docItem" data-search="master data sheet một bảng duy nhất chứa tên pháp lý, passport, địa chỉ, ngày học, ngày làm, noc, travel và report numbers. nên có">
 <div class="docNo">1</div>
-<div class="docText"><div class="docTop"><h3>Master data sheet</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Một bảng duy nhất chứa tên pháp lý, passport, địa chỉ, ngày học, ngày làm, NOC, travel và report numbers.</p></div>
+<div class="docText"><div class="docTop"><h3>Bảng dữ liệu tổng</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Một bảng duy nhất chứa tên pháp lý, hộ chiếu, địa chỉ, thời gian học, thời gian làm việc, NOC, lịch sử đi lại và số chứng nhận.</p></div>
 </article><article class="docItem" data-search="master timeline 10 năm một dòng thời gian theo tháng để kiểm tra personal history, address history, work, study và travel không gap. nên có">
 <div class="docNo">2</div>
-<div class="docText"><div class="docTop"><h3>Master timeline 10 năm</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Một dòng thời gian theo tháng để kiểm tra personal history, address history, work, study và travel không gap.</p></div>
+<div class="docText"><div class="docTop"><h3>Dòng thời gian 10 năm</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Dòng thời gian theo tháng để kiểm tra lịch sử cá nhân, địa chỉ, việc làm, học tập và đi lại không bị trống.</p></div>
 </article><article class="docItem" data-search="document index ghi file name, chủ sở hữu, trang, mục đích, upload field và phiên bản cuối. nên có">
 <div class="docNo">3</div>
-<div class="docText"><div class="docTop"><h3>Document index</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Ghi file name, chủ sở hữu, trang, mục đích, upload field và phiên bản cuối.</p></div>
-</article><article class="docItem" data-search="cấu trúc thư mục theo các trang của web identity, employment, education, language, common-law, child, funds, police, medical, forms, translation, loe và strategic. nên có">
+<div class="docText"><div class="docTop"><h3>Danh mục tài liệu</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Ghi tên file, chủ sở hữu, số trang, mục đích, vị trí tải lên và phiên bản cuối.</p></div>
+</article><article class="docItem" data-search="cấu trúc thư mục theo các trang của web identity, employment, education, language, common-law, child, funds, police, medical, forms, translation và loe. nên có">
 <div class="docNo">4</div>
-<div class="docText"><div class="docTop"><h3>Cấu trúc thư mục theo các trang của web</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Identity, Employment, Education, Language, Common-law, Child, Funds, Police, Medical, Forms, Translation, LOE và Strategic.</p></div>
+<div class="docText"><div class="docTop"><h3>Cấu trúc thư mục theo các trang của web</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Nhân thân, việc làm, học vấn, ngôn ngữ, common-law, con phụ thuộc, tài chính, lý lịch tư pháp, y tế, biểu mẫu, dịch thuật và LOE.</p></div>
 </article><article class="docItem" data-search="quy tắc đặt tên file dùng số thứ tự, người sở hữu, loại tài liệu, giai đoạn và ngôn ngữ; tránh tên chung như scan1 hoặc final-final. nên có">
 <div class="docNo">5</div>
 <div class="docText"><div class="docTop"><h3>Quy tắc đặt tên file</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Dùng số thứ tự, người sở hữu, loại tài liệu, giai đoạn và ngôn ngữ; tránh tên chung như scan1 hoặc final-final.</p></div>
@@ -533,21 +635,21 @@ window.addEventListener("beforeinstallprompt", function (event) {
 <div class="docText"><div class="docTop"><h3>QC factual</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Kiểm tra tên, ngày, số hộ chiếu, employer, tiền, NOC và quan hệ gia đình.</p></div>
 </article><article class="docItem" data-search="qc technical kiểm tra file mở được, đúng chiều, đủ trang, không mờ, đúng dung lượng và không có password. nên có">
 <div class="docNo">9</div>
-<div class="docText"><div class="docTop"><h3>QC technical</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Kiểm tra file mở được, đúng chiều, đủ trang, không mờ, đúng dung lượng và không có password.</p></div>
+<div class="docText"><div class="docTop"><h3>Kiểm tra kỹ thuật file</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Kiểm tra file mở được, đúng chiều, đủ trang, không mờ, đúng dung lượng và không có password.</p></div>
 </article><article class="docItem" data-search="qc consistency so sánh profile, e-apr, eca, language, employer letter, pcc, common-law evidence và loe. nên có">
 <div class="docNo">10</div>
-<div class="docText"><div class="docTop"><h3>QC consistency</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>So sánh profile, e-APR, ECA, language, employer letter, PCC, common-law evidence và LOE.</p></div>
+<div class="docText"><div class="docTop"><h3>Kiểm tra tính nhất quán</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>So sánh profile, e-APR, ECA, language, employer letter, PCC, common-law evidence và LOE.</p></div>
 </article><article class="docItem" data-search="snapshot sau khi submit lưu pdf/screenshot của toàn bộ câu trả lời, upload list, receipts và submission confirmation. nên có">
 <div class="docNo">11</div>
-<div class="docText"><div class="docTop"><h3>Snapshot sau khi submit</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Lưu PDF/screenshot của toàn bộ câu trả lời, upload list, receipts và submission confirmation.</p></div>
+<div class="docText"><div class="docTop"><h3>Lưu bản chụp sau khi nộp</h3><div class="badges"><span class="priority should">NÊN CÓ</span></div></div><p>Lưu PDF hoặc ảnh chụp toàn bộ câu trả lời, danh sách file, biên lai và xác nhận đã nộp.</p></div>
 </article></div></section><section class="page" data-page="crs" id="page-crs">
-<div class="pageHero"><div class="heroIcon">📊</div><div><div class="eyebrow">SCORING TOOL</div><h1>CRS Strategy Lab</h1></div></div>
+<div class="pageHero"><div class="heroIcon">📊</div><div><h1>Tính điểm CRS</h1></div></div>
 <iframe id="crsFrame" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;vi&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;CRS Strategy Lab — Nguyễn Nhật Điền&lt;/title&gt;
+&lt;title&gt;Tính điểm CRS&lt;/title&gt;
 &lt;style&gt;
 :root{
   --bg:#07111f;--panel:#0e1b2d;--panel2:#12243a;--text:#edf6ff;--muted:#91a7bd;
@@ -646,7 +748,7 @@ a{color:#69dcff}
 &lt;div class=&quot;app&quot;&gt;
   &lt;div class=&quot;top&quot;&gt;
     &lt;div class=&quot;brand&quot;&gt;
-      &lt;h1&gt;CRS Strategy Lab&lt;/h1&gt;
+      &lt;h1&gt;Tính điểm CRS&lt;/h1&gt;
       &lt;p&gt;Mô phỏng Express Entry cho &lt;b&gt;Nguyễn Nhật Điền&lt;/b&gt; (26/02/1991) — so sánh nhanh các chiến lược ngôn ngữ và kinh nghiệm.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;badge&quot; id=&quot;officialBadge&quot;&gt;IRCC official rules snapshot • verified 01/07/2026&lt;/div&gt;
@@ -1031,42 +1133,69 @@ calc();
 checkOfficialSources();
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;" title="CRS Strategy Lab"></iframe>
+&lt;/html&gt;" title="Tính điểm CRS"></iframe>
 </section><section class="page" data-page="sources" id="page-sources">
-<div class="pageHero"><div class="heroIcon">🔗</div><div><div class="eyebrow">OFFICIAL REFERENCES</div><h1>Nguồn IRCC chính thức</h1></div></div>
-<div class="sourceGrid"><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html" rel="noopener" target="_blank"><b>Express Entry documents</b><span>Passport, language, ECA, work, funds và PCC</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/apply-permanent-residence.html" rel="noopener" target="_blank"><b>Apply for permanent residence</b><span>Personalized checklist, dependent child, IMM 5409, translations và medical</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html" rel="noopener" target="_blank"><b>Proof of funds</b><span>Official bank-letter fields, access and liquidity</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/police-certificates.html" rel="noopener" target="_blank"><b>Police certificates</b><span>10-year/6-month rules and timing</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-permanent-residents.html" rel="noopener" target="_blank"><b>Medical exams</b><span>Upfront medical for Express Entry</span></a><a href="https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=347" rel="noopener" target="_blank"><b>Common-law proof</b><span>Examples of cohabitation evidence</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html" rel="noopener" target="_blank"><b>Language tests</b><span>Approved tests and 2-year validity</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed.html" rel="noopener" target="_blank"><b>ECA</b><span>Education assessment for immigration purposes</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" rel="noopener" target="_blank"><b>CRS criteria</b><span>Current scoring tables and removal of job-offer points</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/vietnam.html" rel="noopener" target="_blank"><b>Vietnam PCC</b><span>Phiếu Lý lịch tư pháp số 2</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/finland.html" rel="noopener" target="_blank"><b>Finland PCC</b><span>Extract from the Criminal Records</span></a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/australia.html" rel="noopener" target="_blank"><b>Australia PCC</b><span>AFP code 35 and traffic-history rules</span></a></div>
-
+<div class="pageHero"><div class="heroIcon">🔗</div><div><h1>Nguồn chính thức</h1></div></div>
+<div class="sourceGrid">
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" rel="noopener" target="_blank"><b>Express Entry</b><span>Trang tổng quan chính thức của IRCC</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html" rel="noopener" target="_blank"><b>Tài liệu Express Entry</b><span>Hộ chiếu, ngôn ngữ, học vấn, việc làm và tài chính</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/apply-permanent-residence.html" rel="noopener" target="_blank"><b>Nộp hồ sơ thường trú</b><span>Danh sách cá nhân hóa và quy trình nộp hồ sơ</span></a>
+<a href="https://noc.esdc.gc.ca/" rel="noopener" target="_blank"><b>Tra cứu NOC</b><span>Tìm mã nghề, tên nghề và mô tả nhiệm vụ</span></a>
+<a href="https://noc.esdc.gc.ca/Structure/Hierarchy" rel="noopener" target="_blank"><b>Phân loại TEER</b><span>Cấu trúc NOC 2021 và các nhóm TEER</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" rel="noopener" target="_blank"><b>Tiêu chí CRS</b><span>Bảng điểm chính thức của hệ thống CRS</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html" rel="noopener" target="_blank"><b>Kết quả ngôn ngữ</b><span>Điều kiện và thời hạn hiệu lực của bài thi</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed.html" rel="noopener" target="_blank"><b>Đánh giá học vấn (ECA)</b><span>Yêu cầu đánh giá bằng cấp nước ngoài</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html" rel="noopener" target="_blank"><b>Chứng minh tài chính</b><span>Yêu cầu đối với thư ngân hàng và nguồn tiền</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/police-certificates.html" rel="noopener" target="_blank"><b>Lý lịch tư pháp</b><span>Quốc gia cần cung cấp và thời điểm xin giấy</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-permanent-residents.html" rel="noopener" target="_blank"><b>Khám sức khỏe</b><span>Yêu cầu khám sức khỏe cho thường trú nhân</span></a>
+<a href="https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=347" rel="noopener" target="_blank"><b>Bằng chứng common-law</b><span>Ví dụ về tài liệu chứng minh sống chung</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/vietnam.html" rel="noopener" target="_blank"><b>Lý lịch tư pháp Việt Nam</b><span>Hướng dẫn riêng của IRCC cho Việt Nam</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/finland.html" rel="noopener" target="_blank"><b>Lý lịch tư pháp Phần Lan</b><span>Hướng dẫn riêng của IRCC cho Phần Lan</span></a>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/australia.html" rel="noopener" target="_blank"><b>Lý lịch tư pháp Úc</b><span>AFP code 35 và yêu cầu lịch sử giao thông</span></a>
+</div>
 </section></main>
 <script>
 const pages=[...document.querySelectorAll('.page')];
 const navButtons=[...document.querySelectorAll('.navBtn')];
+const menuToggle=document.getElementById('menuToggle');
+const menuClose=document.getElementById('menuClose');
+const navPanel=document.getElementById('navPanel');
+const menuBackdrop=document.getElementById('menuBackdrop');
+function setMenu(open){
+  navPanel?.classList.toggle('open',open);
+  menuBackdrop?.classList.toggle('open',open);
+  menuToggle?.setAttribute('aria-expanded',String(open));
+  navPanel?.setAttribute('aria-hidden',String(!open));
+  menuBackdrop?.setAttribute('aria-hidden',String(!open));
+  document.body.classList.toggle('menuOpen',open);
+}
 function showPage(id,push=true){
   pages.forEach(p=>p.classList.toggle('active',p.dataset.page===id));
   navButtons.forEach(b=>b.classList.toggle('active',b.dataset.page===id));
-  if(push){location.hash=id;localStorage.setItem('canadaMasterPage',id)}
+  if(push) location.hash=id;
+  setMenu(false);
   window.scrollTo({top:0,behavior:'instant'});
 }
 navButtons.forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.goto)));
 document.querySelectorAll('.printPage').forEach(b=>b.addEventListener('click',()=>window.print()));
+menuToggle?.addEventListener('click',()=>setMenu(!navPanel?.classList.contains('open')));
+menuClose?.addEventListener('click',()=>setMenu(false));
+menuBackdrop?.addEventListener('click',()=>setMenu(false));
+document.addEventListener('keydown',event=>{if(event.key==='Escape')setMenu(false)});
 window.addEventListener('hashchange',()=>{
-  const id=location.hash.slice(1);
-  if(document.querySelector(`[data-page="${id}"]`))showPage(id,false);
+  const id=location.hash.slice(1)||'home';
+  if(document.querySelector(`.page[data-page="${id}"]`))showPage(id,false);
 });
-const stored=localStorage.getItem('canadaMasterPage');
-const initial=location.hash.slice(1)||(stored&&stored!=='home'?stored:'identity');
-if(document.querySelector(`.page[data-page="${initial}"]`))showPage(initial,false);else showPage('identity',false);
+const initial=location.hash.slice(1)||'home';
+if(document.querySelector(`.page[data-page="${initial}"]`))showPage(initial,false);else showPage('home',false);
 </script>
 
-<button aria-label="Cài Canada PR Master thành ứng dụng" class="pwaInstallBtn" id="installAppBtn" type="button">
-  <img alt="" src="./icon-192.png"/>
-  <span>Cài ứng dụng<small>Canada PR Master</small></span>
-</button>
 <div aria-hidden="true" class="pwaHelp" id="pwaHelp">
   <div class="pwaHelpCard" role="dialog" aria-modal="true" aria-labelledby="pwaHelpTitle">
     <div class="pwaHelpHead">
       <img alt="Logo lá phong Canada PR" src="./icon-192.png"/>
-      <div><h2 id="pwaHelpTitle">Cài Canada PR Master</h2><p>Ứng dụng chạy độc lập và có thể mở khi mất mạng sau lần tải đầu.</p></div>
+      <div><h2 id="pwaHelpTitle">Cài Canada PR</h2><p>Thêm ứng dụng vào màn hình chính.</p></div>
     </div>
     <ol class="pwaSteps" id="pwaSteps"></ol>
     <button class="pwaHelpClose" id="pwaHelpClose" type="button">Đã hiểu</button>

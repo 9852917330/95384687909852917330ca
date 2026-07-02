@@ -1,15 +1,15 @@
 {
   "id": "./",
-  "name": "Canada PR Master File",
+  "name": "Canada PR",
   "short_name": "Canada PR",
-  "description": "Tổng hợp tài liệu và công cụ CRS phục vụ hồ sơ định cư Canada theo Express Entry.",
+  "description": "Hồ sơ Express Entry, công cụ CRS và nguồn chính thức.",
   "lang": "vi",
-  "start_url": "./",
+  "start_url": "./#home",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#050c17",
-  "theme_color": "#050c17",
+  "background_color": "#030711",
+  "theme_color": "#030711",
   "prefer_related_applications": false,
   "categories": [
     "education",
@@ -44,9 +44,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Nhân thân và hộ tịch",
-      "short_name": "Nhân thân",
-      "url": "./#identity",
+      "name": "Trang chủ",
+      "short_name": "Trang chủ",
+      "url": "./#home",
       "icons": [
         {
           "src": "./icon-192.png",
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "name": "CRS Strategy Lab",
+      "name": "Tính điểm CRS",
       "short_name": "CRS",
       "url": "./#crs",
       "icons": [
